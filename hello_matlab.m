@@ -4,4 +4,4 @@ clear
 close all
 
 %% Write to command window
-disp("Hello Matlab");
+disp("Hello Matlab & Simulink");
