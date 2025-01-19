@@ -11,4 +11,4 @@
 - <mark>Clone a repo</mark>
     - perform the first commit.
     - add the email address used in GitHub
-    - add the personal token
+    - add the personal tk.
