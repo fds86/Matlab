@@ -10,5 +10,5 @@
 - https://github.com/settings/tokens
 - <mark>Clone a repo</mark>
     - perform the first commit.
-    - add the email address used in GitHub
-    - add the personal tk.
+    - add the email address used in GitHub.
+    - add the github token.
