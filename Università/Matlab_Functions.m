@@ -58,3 +58,6 @@ ss(A,B,C,D) % crea un oggetto che rappresenta un modello nello spazio
 
 zpk(z,p,k) % crea un oggetto che rappresenta un sistema a tempo continuo 
            % passando in input gli zeri z, i poli p e il guadagno k.
+
+c2d(sys_c, Tc, method) % è possibile convertire un sistema a tempo 
+                       % continuo in uno a tempo discreto.
