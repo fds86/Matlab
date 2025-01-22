@@ -15,11 +15,13 @@ clear var1 var2 %elimina le variabili var1 e var2.
 
 impulse (num, den, t) % calcola la risposta all’impulso del sistema la cui 
                       % funzione di trasferimento è descritta dai polinomi 
-                      % num e den. t è il vettore che definisce il tempo.
+                      % num e den. t è il vettore che definisce il tempo 
+                      % (il vettore tempo non è un parametro obbligatorio).
 
 step (num, den, t) % calcola la risposta allo scalino del sistema la cui 
                    % funzione di trasferimento è descritta dai polinomi 
                    % num e den. t è il vettore che definisce il tempo.
+                   % (il vettore tempo non è un parametro obbligatorio).
 
 lsim (num, den, u, t) % calcola la risposta del sistema la cui funzione di 
                       % trasferimento è descritta dai polinomi num e den 
@@ -59,5 +61,18 @@ ss(A,B,C,D) % crea un oggetto che rappresenta un modello nello spazio
 zpk(z,p,k) % crea un oggetto che rappresenta un sistema a tempo continuo 
            % passando in input gli zeri z, i poli p e il guadagno k.
 
-c2d(sys_c, Tc, method) % è possibile convertire un sistema a tempo 
-                       % continuo in uno a tempo discreto.
+c2d(sys_c,Tc,method) % è possibile convertire un sistema a tempo 
+                     % continuo in uno a tempo discreto.
+
+[y,t,x]=initial(sys,x0); % permette di tracciare l'evoluzione libera di un
+                         % sistema ottenuto da un modello nello spazio di
+                         % stato (ss).
+                         % sys -> sistema nello spazio di stato.
+                         % x0 -> vettore dello stato iniziale.
+                         % y -> uscita in evoluzione libera.
+                         % x -> evoluzione dello stato.
+
+ [y,t,x]=step(sys); % permette di disegnare la risposta a gradino di un sistema
+                    % sys -> sistema ottenuto tramite funzioni ss o tf.
+                    % y -> risposta a gradino.
+                    % x -> evoluzione dello stato.
