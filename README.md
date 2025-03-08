@@ -12,3 +12,4 @@
     - perform the first commit.
     - add the email address used in GitHub.
     - add the github token.
+    - matlab.git.clearCredential("https://github.com/myrepo.git")
